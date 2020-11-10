@@ -1,6 +1,7 @@
 package com.example.listenit;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaMetadata;
 import android.media.MediaMetadataRetriever;
 import android.view.LayoutInflater;
@@ -47,6 +48,14 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.ViewHolder> 
                     .into(holder.song_image);
         }
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(context,PlayerActivity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
