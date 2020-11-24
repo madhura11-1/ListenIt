@@ -53,6 +53,7 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.ViewHolder> 
             public void onClick(View view) {
 
                 Intent intent = new Intent(context,PlayerActivity.class);
+                intent.putExtra("position", position);
                 context.startActivity(intent);
             }
         });
@@ -66,11 +67,13 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.ViewHolder> 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView song_title;
-        ImageView song_image;
+        ImageView song_image, menuMore;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             song_image = itemView.findViewById(R.id.song_image);
             song_title = itemView.findViewById(R.id.song_title);
+            menuMore = itemView.findViewById(R.id.menuMore);
+
         }
     }
 

@@ -124,7 +124,7 @@
             android:src="@drawable/ic_baseline_shuffle_24"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="20dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="25dp"
             android:foregroundGravity="center_vertical"/>
@@ -133,27 +133,28 @@
             android:id="@+id/backward"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:src="@drawable/ic_baseline_skip_previous_24"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="25dp"
             android:layout_toEndOf="@id/shuffle"
             android:layout_toRightOf="@id/shuffle"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="75dp"
-            />
+            android:src="@drawable/ic_baseline_skip_previous_24" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_play_arrow_24"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginBottom="30dp"
             android:layout_toEndOf="@id/backward"
             android:layout_toRightOf="@id/backward"
-            android:layout_marginLeft="10dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:focusable="true"
+            android:backgroundTint="@color/white"
             android:clickable="true"
-            android:layout_marginBottom="30dp"
-            android:backgroundTint="@color/white"/>
+            android:focusable="true"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            />
 
         <ImageView
             android:id="@+id/forward"
@@ -215,7 +216,8 @@
             android:layout_below="@id/start_time"
             android:layout_marginTop="40dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:id="@+id/seekbar"/>
 
 
     </RelativeLayout>
